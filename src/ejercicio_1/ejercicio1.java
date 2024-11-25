@@ -26,8 +26,8 @@ public class ejercicio1 {
          * Aqui creo 2 variables mas para la serie, diciendo con los 2 numeros que va a
          * empezar
          * y por ultimo tenemos resultado, que sera pues la veriable que nos de el
-         * resultado 
-        */
+         * resultado
+         */
         long num1 = 0, num2 = 1, resultado;
         long n;
 
@@ -35,17 +35,31 @@ public class ejercicio1 {
         solotexto("Introduce un Numero, solo positivo: ");
         n = escanear.nextLong();
 
+        /*
+         * Hacemos un bucle while para que se repita el codigo si hay un numero negativo
+         * lo que hacemos aqui era como en el if de abajo que esta tapado
+         * le decimos que si 0 es mayor a n que imprima por pantalla lo siguiente
+         * pero en el caso del if al no poder repetir la seciencia ya que no es un
+         * bucle,
+         * entonces lo que habia que hacer es ponerlo while y despues poner lo que
+         * queremos que salga en pantalla
+         * para al final si da positivo para de hacerce el bucle.
+         * Ademas hay que poner otra vez el scanner para que se ejecute cada vez que se
+         * añada
+         * un numero negativo.
+         */
+
         while (0 > n) {
             solotexto("Tu numero es negativo");
             solotexto("Introduce un Numero, solo positivo: ");
             n = escanear.nextLong();
         }
-/* 
-        if (0 > n) {
-            solotexto("Tu numero es negativo");
-            return;
-        } */
-            
+        /*
+         * if (0 > n) {
+         * solotexto("Tu numero es negativo");
+         * return;
+         * }
+         */
 
         imprimStyLn("El numero añadido es el: ", n);
         escanear.close();
@@ -71,8 +85,9 @@ public class ejercicio1 {
             num1 = num2;
             num2 = resultado;
 
-            // *Se pone num1 en vez de num2 o resultado porque practicamente num2 sera el resultado de las sumas
-            // *Entonces num1 representaria el verdadero valor
+            // *Se pone num1 en vez de num2 o resultado porque practicamente num2 sera el
+            // *resultado de las sumas
+            // *Entonces num1 representaria el verdadero valor*
             System.out.print(num1 + ", ");
         }
 
