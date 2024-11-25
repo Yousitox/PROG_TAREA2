@@ -34,14 +34,12 @@ public class ejercicio1 {
         // *Scanner* //
         solotexto("Introduce un Numero, solo positivo: ");
         n = escanear.nextLong();
-        try {
-            if (0 > n) {
-                solotexto("Tu numero es negativo");
-            }
+
+        if (0 > n) {
+            solotexto("Tu numero es negativo");
             return;
-        } catch (Exception e) {
-            solotexto("El numero que añadiste es poitivo");
         }
+            
 
         imprimStyLn("El numero añadido es el: ", n);
         escanear.close();
