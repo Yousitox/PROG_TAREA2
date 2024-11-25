@@ -29,7 +29,7 @@ public class ejercicio1 {
         escanear.close();
 
         long resultado = 0;
-        
+
         // *Hacer que si añades un numero negatvio tengas que volver a añadir el balor* //
         if(0 > n){
             solotexto("Tienes que ingresar un numero positivo");  
@@ -40,6 +40,10 @@ public class ejercicio1 {
             resultado = n + i;
             System.out.println(i + " " + n);
         }
+
+        /*
+         * HAY QUE AÑADIR QUE EL VALOR SE SUME 5 VECES
+         */
 
 
 
