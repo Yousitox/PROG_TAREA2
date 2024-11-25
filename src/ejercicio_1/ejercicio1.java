@@ -35,10 +35,16 @@ public class ejercicio1 {
         solotexto("Introduce un Numero, solo positivo: ");
         n = escanear.nextLong();
 
+        while (0 > n) {
+            solotexto("Tu numero es negativo");
+            solotexto("Introduce un Numero, solo positivo: ");
+            n = escanear.nextLong();
+        }
+/* 
         if (0 > n) {
             solotexto("Tu numero es negativo");
             return;
-        }
+        } */
             
 
         imprimStyLn("El numero añadido es el: ", n);
@@ -65,7 +71,9 @@ public class ejercicio1 {
             num1 = num2;
             num2 = resultado;
 
-            System.out.print(num2 + ", ");
+            // *Se pone num1 en vez de num2 o resultado porque practicamente num2 sera el resultado de las sumas
+            // *Entonces num1 representaria el verdadero valor
+            System.out.print(num1 + ", ");
         }
 
     }
