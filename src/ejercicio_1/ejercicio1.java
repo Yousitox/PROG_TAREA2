@@ -26,11 +26,15 @@ public class ejercicio1 {
         solotexto("Introduce un Numero, solo positivo");
         long n = escanear.nextLong();
         imprimStyLn("El numero añadido es el: ", n);
+        escanear.close();
 
         /*
          * Hacer que si añades un numero negatvio tengas que volver a añadir el balor
          */
-        
+        if(0 > n){
+            solotexto("Tienes que ingresar un numero positivo");
+            
+        }
 
     }
 
