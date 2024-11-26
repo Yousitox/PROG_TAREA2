@@ -14,12 +14,6 @@ public class ejercicio2 {
         System.out.println(texto + numero);
     }
 
-    // *Mostrar matriz*
-    public static void mostarMatriz(){
-
-    }
-
-
     public static void main(String[] args) {
 
         // *MAXIMO UN 10X10*
@@ -41,6 +35,7 @@ public class ejercicio2 {
             fla = scanear.nextInt();
         }
 
+        // ! CODIGO NO USADO
         /*
          * // *el array*
          * textT("Introduce los numeros del array");
@@ -53,6 +48,7 @@ public class ejercicio2 {
          * System.out.print(i + " ,");
          * }
          */
+        // ! HASTA AQUI EL CODIGO NO USASDO
 
         // *numero de columnas*
         textT("Introduce una cantidad de columnas");
@@ -70,9 +66,6 @@ public class ejercicio2 {
         }
         scanear.close();
 
-        int [][] matriz = new int[fla][clum];
-        System.out.println(matriz);
-
         // *Bucle para crear las filas y columnas*
         for (int i = 1; i <= fla; i++) {
             for (int j = 1; j <= clum; j++) {
@@ -83,8 +76,17 @@ public class ejercicio2 {
 
     }
 
-        // *Funcion de la matriz*
-        public static void crearMatriz(){
-            int [][] matriz = new int[fla][clum];
-        }
+
+    //* AQUI PROBANDO COSAS CON LAS MATRICES */
+    // *Funcion de la matriz*
+    public static void crearMatriz(int matrices) {
+        int[][] matriz;
+        System.out.println(matrices);
+    }
+
+    // *Mostrar matriz*
+    public static void mostarMatriz() {
+
+    }
+
 }
