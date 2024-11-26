@@ -4,15 +4,26 @@ import java.util.Scanner;
 
 public class ejercicio2 {
 
+    static Scanner scanear = new Scanner(System.in);
+
     public static void textT(String texto) {
         System.out.println(texto);
     }
 
-    public static void textTYN(String texto, long numero) {
+    public static void textTYN(String texto, int numero) {
         System.out.println(texto + numero);
     }
 
-    static Scanner scanear = new Scanner(System.in);
+    // *Funcion de la matriz*
+    public static void crearMatriz(){
+
+    }
+
+    // *Mostrar matriz*
+    public static void mostarMatriz(){
+        
+    }
+
 
     public static void main(String[] args) {
 
@@ -34,45 +45,44 @@ public class ejercicio2 {
             textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
             n = scanear.nextInt();
         }
-        
-
-        // *el array*
-        textT("Introduce los numeros del array");
-        int [] a = new int[n];
-        for(int i=0;i<n;i++) {
-            a[i] = scanear.nextInt();
-        }
-        
-        for(int i : a) {
-            System.out.print(i+" ,");
-        }
-        scanear.close();
-    
 
         /*
-         * // *numero de columnas*
-         * textT("Introduce una cantidad de columnas");
-         * long clum;
-         * clum = scanear.nextLong();
-         * textTYN("Numero de columnas añadidas: ", clum);
-         * // * Si supera el valor maximo*
-         * while (MAXIMO < clum) {
-         * textT("Solo agregar maximo " + MAXIMO +", introduce otra vez otro valor: ");
-         * clum = scanear.nextLong();
-         * } while (0 > clum) {
-         * textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
-         * clum = scanear.nextLong();
+         * // *el array*
+         * textT("Introduce los numeros del array");
+         * int[] a = new int[n];
+         * for (int i = 0; i < n; i++) {
+         * a[i] = scanear.nextInt();
+         * }
+         * 
+         * for (int i : a) {
+         * System.out.print(i + " ,");
          * }
          */
 
-/* 
+        // *numero de columnas*
+        textT("Introduce una cantidad de columnas");
+        int clum;
+        clum = scanear.nextInt();
+        textTYN("Numero de columnas añadidas: ", clum);
+        // * Si supera el valor maximo*
+        while (MAXIMO < clum) {
+            textT("Solo agregar maximo " + MAXIMO + ", introduce otra vez otro valor: ");
+            clum = scanear.nextInt();
+        }
+        while (0 > clum) {
+            textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
+            clum = scanear.nextInt();
+        }
+
+        scanear.close();
+
         // *Bucle para crear las filas y columnas*
-        for (long i = 1; i <= n; i++) {
-            for (long j = 1; j <= n; j++) {
-                System.out.print("* ");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                System.out.print("1 ");
             }
             System.out.println(" ");
-        } */
+        }
 
     }
 }
