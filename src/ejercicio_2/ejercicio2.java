@@ -18,8 +18,6 @@ public class ejercicio2 {
 
     public static void main(String[] args) {
 
-        // ************probando nuevo main***************** */
-
         crearMatriz();
         mostarMatriz();
 
