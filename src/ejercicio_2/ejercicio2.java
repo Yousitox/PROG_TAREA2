@@ -72,9 +72,9 @@ public class ejercicio2 {
         textT("RESULTADO");
         for (int i = 1; i <= fla; i++) {
             for (int j = 1; j <= clum; j++) {
-                System.out.print("1 ");
+                textT("1 ");
             }
-            System.out.println(" ");
+            textT(" ");
         }
 
     }
