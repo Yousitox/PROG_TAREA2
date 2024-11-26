@@ -14,14 +14,9 @@ public class ejercicio2 {
         System.out.println(texto + numero);
     }
 
-    // *Funcion de la matriz*
-    public static void crearMatriz(){
-
-    }
-
     // *Mostrar matriz*
     public static void mostarMatriz(){
-        
+
     }
 
 
@@ -32,18 +27,18 @@ public class ejercicio2 {
 
         // *numero de filas*
         textT("Introduce una cantidad de numeros para el array, maximo 10: ");
-        int n;
-        n = scanear.nextInt();
-        textTYN("Numero de numeros de arrays añadidos: ", n);
+        int fla;
+        fla = scanear.nextInt();
+        textTYN("Numero de numeros de arrays añadidos: ", fla);
         // *Si supera el valor maximo*
-        while (MAXIMO < n) {
+        while (MAXIMO < fla) {
             textT("Solo agregar maximo " + MAXIMO + ", introduce otra vez otro valor: ");
-            n = scanear.nextInt();
+            fla = scanear.nextInt();
         }
         // *Si es negativo*
-        while (0 > n) {
+        while (0 > fla) {
             textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
-            n = scanear.nextInt();
+            fla = scanear.nextInt();
         }
 
         /*
@@ -73,16 +68,23 @@ public class ejercicio2 {
             textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
             clum = scanear.nextInt();
         }
-
         scanear.close();
 
+        int [][] matriz = new int[fla][clum];
+        System.out.println(matriz);
+
         // *Bucle para crear las filas y columnas*
-        for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
+        for (int i = 1; i <= fla; i++) {
+            for (int j = 1; j <= clum; j++) {
                 System.out.print("1 ");
             }
             System.out.println(" ");
         }
 
     }
+
+        // *Funcion de la matriz*
+        public static void crearMatriz(){
+            int [][] matriz = new int[fla][clum];
+        }
 }
