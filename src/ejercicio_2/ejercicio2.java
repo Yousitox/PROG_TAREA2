@@ -70,8 +70,8 @@ public class ejercicio2 {
 
         // *Bucle para crear las filas y columnas*
         textT("RESULTADO");
-        for (int i = 0; i <= fla; i++) {
-            for (int j = 0; j <= clum; j++) {
+        for (int i = 0; i < fla; i++) {
+            for (int j = 0; j < clum; j++) {
                 if (i == 0 || i == fla - 1 || j == 0 || j == clum - 1) {
                     System.out.print("1 ");
                 } else {
