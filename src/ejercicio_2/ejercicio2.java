@@ -34,7 +34,7 @@ public class ejercicio2 {
         fla = scanear.nextInt();
         textTYN("Numero de numeros de filas añadidos: ", fla);
         // *Si supera el valor maximo Y si es negativo*
-        while ( 0 > fla || MAXIMO < fla) {
+        while (0 > fla || MAXIMO < fla) {
             textT("Solo agregar maximo " + MAXIMO + ", introduce otra vez otro valor: ");
             fla = scanear.nextInt();
         }
@@ -70,13 +70,15 @@ public class ejercicio2 {
 
         // *Bucle para crear las filas y columnas*
         textT("RESULTADO");
-        for (int i = 1; i <= fla; i++) {
-            for (int j = 1; j <= clum; j++) {
-                textT("1 ");
+        for (int i = 0; i <= fla; i++) {
+            for (int j = 0; j <= clum; j++) {
+                if (i == 0 || i == fla - 1 || j == 0 || j == clum - 1) {
+                    System.out.print("1 ");
+                } else {
+                    System.out.print("0 ");
+                }
             }
-            textT(" ");
+            System.out.println(" ");
         }
-
     }
-
 }
