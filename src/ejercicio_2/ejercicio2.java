@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class ejercicio2 {
 
     static Scanner scanear = new Scanner(System.in);
+    static int fla;
+    static int clum;
 
     public static void textT(String texto) {
         System.out.println(texto);
@@ -30,10 +32,9 @@ public class ejercicio2 {
         final byte MAXIMO = 10;
 
         // *numero de filas*
-        textT("Introduce una cantidad de numeros para el array, maximo 10: ");
-        int fla;
+        textT("Introduce una cantidad de numeros para las filas, maximo 10: ");
         fla = scanear.nextInt();
-        textTYN("Numero de numeros de arrays añadidos: ", fla);
+        textTYN("Numero de numeros de filas añadidos: ", fla);
         // *Si supera el valor maximo*
         while (MAXIMO < fla) {
             textT("Solo agregar maximo " + MAXIMO + ", introduce otra vez otro valor: ");
@@ -62,7 +63,6 @@ public class ejercicio2 {
 
         // *numero de columnas*
         textT("Introduce una cantidad de columnas");
-        int clum;
         clum = scanear.nextInt();
         textTYN("Numero de columnas añadidas: ", clum);
         // * Si supera el valor maximo*
@@ -74,13 +74,10 @@ public class ejercicio2 {
             textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
             clum = scanear.nextInt();
         }
-        scanear.close();
     }
 
     // *Mostrar matriz*
     public static void mostarMatriz() {
-
-        crearMatriz();
 
         // *Bucle para crear las filas y columnas*
         for (int i = 1; i <= fla; i++) {
