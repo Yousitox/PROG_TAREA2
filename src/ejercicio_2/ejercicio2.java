@@ -17,7 +17,7 @@ public class ejercicio2 {
     }
 
     public static void main(String[] args) {
-
+        textT("CASI MUERO HACIENDO MATRICES NO LO HAGAN");
         crearMatriz();
         mostarMatriz();
 
@@ -33,14 +33,9 @@ public class ejercicio2 {
         textT("Introduce una cantidad de numeros para las filas, maximo 10: ");
         fla = scanear.nextInt();
         textTYN("Numero de numeros de filas añadidos: ", fla);
-        // *Si supera el valor maximo*
-        while (MAXIMO < fla) {
+        // *Si supera el valor maximo Y si es negativo*
+        while ( 0 > fla || MAXIMO < fla) {
             textT("Solo agregar maximo " + MAXIMO + ", introduce otra vez otro valor: ");
-            fla = scanear.nextInt();
-        }
-        // *Si es negativo*
-        while (0 > fla) {
-            textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
             fla = scanear.nextInt();
         }
 
@@ -63,13 +58,9 @@ public class ejercicio2 {
         textT("Introduce una cantidad de columnas");
         clum = scanear.nextInt();
         textTYN("Numero de columnas añadidas: ", clum);
-        // * Si supera el valor maximo*
-        while (MAXIMO < clum) {
+        // * Si supera el valor maximo Y si es negativo*
+        while (0 > clum || MAXIMO < clum) {
             textT("Solo agregar maximo " + MAXIMO + ", introduce otra vez otro valor: ");
-            clum = scanear.nextInt();
-        }
-        while (0 > clum) {
-            textT("Solo agregar numeros positivos, introduce otra vez otro valor: ");
             clum = scanear.nextInt();
         }
     }
@@ -78,6 +69,7 @@ public class ejercicio2 {
     public static void mostarMatriz() {
 
         // *Bucle para crear las filas y columnas*
+        textT("RESULTADO");
         for (int i = 1; i <= fla; i++) {
             for (int j = 1; j <= clum; j++) {
                 System.out.print("1 ");
