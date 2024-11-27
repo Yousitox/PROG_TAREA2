@@ -25,7 +25,7 @@ public class ejercicio3 {
 
     //funcion para salir
     public static void salir() {
-        textT("PRUEBA3");
+        scanear.close();
     }
 
     public static void main(String[] args) {
