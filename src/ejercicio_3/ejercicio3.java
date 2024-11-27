@@ -12,24 +12,8 @@ public class ejercicio3 {
 
     }
 
-    //funcion de jugar
-    public static void jugar() {
-        textT("PRUEBA1");
-
-    }
-
-    //funcion de la configuracion
-    public static void configuracion() {
-        textT("PRUEBA2");
-    }
-
-    //funcion para salir
-    public static void salir() {
-        scanear.close();
-    }
-
-    public static void main(String[] args) {
-
+    //funcion menu
+    public static void menu() {
         textT("-----MENU-------");
 
         textT("1: Jugar");
@@ -49,6 +33,39 @@ public class ejercicio3 {
                 salir();
                 break;
         }
+
+    }
+
+
+    //funcion de jugar
+    public static void jugar() {
+        textT("PRUEBA1");
+
+    }
+
+    //funcion de la configuracion
+    public static void configuracion() {
+        textT("PRUEBA2");
+        textT("Selecciona 1 para ir al menu");
+
+        switch (scanear.nextInt()) {
+            case 1:
+                menu();
+                break;
+        
+            default:
+                break;
+        }
+    }
+
+    //funcion para salir
+    public static void salir() {
+        scanear.close();
+    }
+
+    public static void main(String[] args) {
+
+        menu();
 
     }
 }
