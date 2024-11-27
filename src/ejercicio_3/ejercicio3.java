@@ -6,13 +6,22 @@ public class ejercicio3 {
 
     static Scanner scanear = new Scanner(System.in);
 
-    //funcion para abrebiar el sistem.out.println
+    static int numIntento = 3;
+
+    static int numAleatoGenera = 10;
+
+    //*funcion para abrebiar el sistem.out.println
     public static void textT(String texto) {
         System.out.println(texto);
 
     }
+        //*funcion para abrebiar el sistem.out.print
+        public static void textTS(String textoS) {
+            System.out.println(textoS);
+    
+        }
 
-    //funcion menu
+    //*funcion menu
     public static void menu() {
         textT("-----MENU-------");
 
@@ -21,6 +30,8 @@ public class ejercicio3 {
         textT("2: Configuracion");
 
         textT("0: Salir");
+
+        textTS("Elige una opcion: ");
 
         switch (scanear.nextInt()) {
             case 1:
@@ -37,33 +48,45 @@ public class ejercicio3 {
     }
 
 
-    //funcion de jugar
+    //*funcion de jugar
     public static void jugar() {
-        textT("PRUEBA1");
+        textT("");
+        textT("!COMIENZA EL JUEGO!");
+        System.out.println(numIntento + " " + numAleatoGenera);
 
     }
 
-    //funcion de la configuracion
+    //*funcion de la configuracion
     public static void configuracion() {
-        textT("PRUEBA2");
-        textT("Selecciona 1 para ir al menu");
+        textT("");
+        textT("Configura el juego: ");
+
+        textTS("Introduce el numero maximo de intextos permitidos");
+        numIntento = scanear.nextInt();
+        textT("");
+        textTS("Introduce el numero maximo de numeros generados");
+        numAleatoGenera = scanear.nextInt();
+
+
+
+        //* */
+        textT("Selecciona 0 para ir al menu");
 
         switch (scanear.nextInt()) {
-            case 1:
+            default:
                 menu();
                 break;
-        
-            default:
-                break;
         }
+        scanear.close();
     }
 
-    //funcion para salir
+    //*funcion para salir
     public static void salir() {
         textT("Gracias por jugar :)");
         scanear.close();
     }
 
+    //*Funcion principal
     public static void main(String[] args) {
 
         menu();
