@@ -60,6 +60,7 @@ public class ejercicio3 {
 
     //funcion para salir
     public static void salir() {
+        textT("Gracias por jugar :)");
         scanear.close();
     }
 
