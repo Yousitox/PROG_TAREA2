@@ -12,16 +12,18 @@ public class ejercicio3 {
 
     }
 
-
+    //funcion de jugar
     public static void jugar() {
         textT("PRUEBA1");
 
     }
 
+    //funcion de la configuracion
     public static void configuracion() {
         textT("PRUEBA2");
     }
 
+    //funcion para salir
     public static void salir() {
         textT("PRUEBA3");
     }
