@@ -76,6 +76,7 @@ public class ejercicio2 {
             textT("Solo agregar maximo " + MAXIMO + ", introduce otra vez otro valor: ");
             clum = scanear.nextInt();
         }
+        scanear.close();
     }
 
     // *Mostrar matriz*
@@ -100,6 +101,12 @@ public class ejercicio2 {
      * y igual pasa con la columna, en este caso
      * si i no se encuentra dentro de la primera u ultima fila o columna
      * prondra un 0 por el else
+     * 
+     * [ Se pone -1 ya que el indice de for empieza por 0
+     * entonces seria, 0 = 1/ 2 = 1 / 3 = 2 /
+     * 4 = 3 / 5 = 4, entonces se le resta 1
+     * para que sea 4 y no el valor 5 y asi saber que
+     * es el ultimo indice]
      */
     public static void mostarMatriz() {
 
