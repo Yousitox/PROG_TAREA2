@@ -93,9 +93,17 @@ public class ejercicio3 {
 
         textTS("Introduce el numero maximo de intextos permitidos");
         numIntento = scanear.nextInt();
+        while (0 > numIntento || 0 == numIntento) {
+            textT("No puedes agregar numeros negativos, ni 0, pon un numero positivo");
+            numIntento = scanear.nextInt();
+        }
         textT("");
         textTS("Introduce el numero maximo de numeros generados");
         numAleatoGenera = scanear.nextInt();
+        while (0 > numAleatoGenera || 0 == numAleatoGenera) {
+            textT("No puedes agregar numeros negativos, ni 0, pon un numero positivo");
+            numAleatoGenera = scanear.nextInt();
+        }
         menu();
         scanear.close();
     }
