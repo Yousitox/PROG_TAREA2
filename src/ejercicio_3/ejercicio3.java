@@ -65,17 +65,23 @@ public class ejercicio3 {
                 adivNum = scanear.nextInt();
                 numIntento -= 1;
             } else {
-                textT("Felicidades el numero era " + ramdon + " Te han sobrado: " + numIntento);
+                textT("Felicidades el numero era " + ramdon + " Te han sobrado: " + numIntento + " Intentos");
                 break;
             }
-            
+
+            if (adivNum > ramdon) {
+                textT("El numero introducido es menor");
+            } else if (adivNum < ramdon) {
+                textT("El numero introducido es mayor");
+            }
+
             if (numIntento <= 0) {
                 System.out.println("Perdiste, el numero era: " + ramdon);
                 break;
             }
 
         }
-
+        textT("Gracias por jugar, espero tu regreso pronto");
         scanear.close();
 
     }
