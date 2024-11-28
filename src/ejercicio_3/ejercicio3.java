@@ -64,7 +64,7 @@ public class ejercicio3 {
                         "Adivina el numero entre 1 a " + numAleatoGenera + " Tienes " + numIntento + " Intentos");
                 adivNum = scanear.nextInt();
                 numIntento -= 1;
-            } else {
+            } else if (adivNum == ramdon) {
                 textT("Felicidades el numero era " + ramdon + " Te han sobrado: " + numIntento + " Intentos");
                 break;
             }
@@ -75,7 +75,7 @@ public class ejercicio3 {
                 textT("El numero introducido es mayor");
             }
 
-            if (numIntento <= 0) {
+            if (numIntento < 0) {
                 System.out.println("Perdiste, el numero era: " + ramdon);
                 break;
             }
