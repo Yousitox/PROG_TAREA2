@@ -65,7 +65,7 @@ public class ejercicio3 {
                 adivNum = scanear.nextInt();
                 numIntento -= 1;
                 continue;
-            } else if (numIntento == 0) {
+            } else if (numIntento <= 0) {
                 System.out.println("Perdiste, el numero era: " + ramdon);
                 break;
             } else {
