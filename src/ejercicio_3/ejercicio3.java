@@ -64,12 +64,13 @@ public class ejercicio3 {
                         "Adivina el numero entre 1 a " + numAleatoGenera + " Tienes " + numIntento + " Intentos");
                 adivNum = scanear.nextInt();
                 numIntento -= 1;
-                continue;
-            } else if (numIntento <= 0) {
-                System.out.println("Perdiste, el numero era: " + ramdon);
-                break;
             } else {
                 textT("Felicidades el numero era " + ramdon + " Te han sobrado: " + numIntento);
+                break;
+            }
+            
+            if (numIntento <= 0) {
+                System.out.println("Perdiste, el numero era: " + ramdon);
                 break;
             }
 
