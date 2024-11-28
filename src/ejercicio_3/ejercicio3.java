@@ -44,7 +44,7 @@ public class ejercicio3 {
                 salir();
                 break;
         }
-
+        scanear.close();
     }
 
 
@@ -55,10 +55,27 @@ public class ejercicio3 {
         //*Genera un numero ramdon
         int ramdon = (int) (Math.random()*numAleatoGenera) + 1;
         //*Variable para introducir para adivinar el numero
-        int adivNum;
-        //* */
+        int adivNum = 0;
+        //*Juego :)*/
+
+        for(int i = 0; i <= numAleatoGenera; i*=0 ){
+            if (adivNum != ramdon) {
+                System.out.println("Adivina el numero entre 1 a " + numAleatoGenera + " Tienes " + numIntento + " Intentos");
+                adivNum = scanear.nextInt();
+                numIntento -= 1;
+                continue;
+            }else if (numIntento == 0) {
+                System.out.println("Perdiste, el numero era: " + ramdon);
+                break;
+            } else {
+                textT("Felicidades el numero era " + ramdon + " Te han sobrado: " + numIntento);
+                break;
+            }
 
 
+        }
+
+        scanear.close();
 
     }
 
@@ -72,17 +89,7 @@ public class ejercicio3 {
         textT("");
         textTS("Introduce el numero maximo de numeros generados");
         numAleatoGenera = scanear.nextInt();
-
-
-
-        //* */
-        textT("Selecciona 0 para ir al menu");
-
-        switch (scanear.nextInt()) {
-            default:
-                menu();
-                break;
-        }
+        menu();
         scanear.close();
     }
 
