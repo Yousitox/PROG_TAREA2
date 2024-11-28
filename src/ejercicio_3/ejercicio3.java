@@ -10,18 +10,19 @@ public class ejercicio3 {
 
     static int numAleatoGenera = 10;
 
-    //*funcion para abrebiar el sistem.out.println
+    // *funcion para abrebiar el sistem.out.println
     public static void textT(String texto) {
         System.out.println(texto);
 
     }
-        //*funcion para abrebiar el sistem.out.print
-        public static void textTS(String textoS) {
-            System.out.println(textoS);
-    
-        }
 
-    //*funcion menu
+    // *funcion para abrebiar el sistem.out.print
+    public static void textTS(String textoS) {
+        System.out.println(textoS);
+
+    }
+
+    // *funcion menu
     public static void menu() {
         textT("-----MENU-------");
 
@@ -47,24 +48,24 @@ public class ejercicio3 {
         scanear.close();
     }
 
-
-    //*funcion de jugar
+    // *funcion de jugar
     public static void jugar() {
         textT("");
         textT("!COMIENZA EL JUEGO!");
-        //*Genera un numero ramdon
-        int ramdon = (int) (Math.random()*numAleatoGenera) + 1;
-        //*Variable para introducir para adivinar el numero
+        // *Genera un numero ramdon
+        int ramdon = (int) (Math.random() * numAleatoGenera) + 1;
+        // *Variable para introducir para adivinar el numero
         int adivNum = 0;
-        //*Juego :)*/
+        // *Juego :)*/
 
-        for(int i = 0; i <= numAleatoGenera; i*=0 ){
+        for (int i = 0; i <= numAleatoGenera; i *= 0) {
             if (adivNum != ramdon) {
-                System.out.println("Adivina el numero entre 1 a " + numAleatoGenera + " Tienes " + numIntento + " Intentos");
+                System.out.println(
+                        "Adivina el numero entre 1 a " + numAleatoGenera + " Tienes " + numIntento + " Intentos");
                 adivNum = scanear.nextInt();
                 numIntento -= 1;
                 continue;
-            }else if (numIntento == 0) {
+            } else if (numIntento == 0) {
                 System.out.println("Perdiste, el numero era: " + ramdon);
                 break;
             } else {
@@ -72,14 +73,13 @@ public class ejercicio3 {
                 break;
             }
 
-
         }
 
         scanear.close();
 
     }
 
-    //*funcion de la configuracion
+    // *funcion de la configuracion
     public static void configuracion() {
         textT("");
         textT("Configura el juego: ");
@@ -93,13 +93,13 @@ public class ejercicio3 {
         scanear.close();
     }
 
-    //*funcion para salir
+    // *funcion para salir
     public static void salir() {
         textT("Gracias por jugar :)");
         scanear.close();
     }
 
-    //*Funcion principal
+    // *Funcion principal
     public static void main(String[] args) {
 
         menu();
