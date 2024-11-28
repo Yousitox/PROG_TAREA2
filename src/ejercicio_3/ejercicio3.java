@@ -52,7 +52,13 @@ public class ejercicio3 {
     public static void jugar() {
         textT("");
         textT("!COMIENZA EL JUEGO!");
-        System.out.println(numIntento + " " + numAleatoGenera);
+        //*Genera un numero ramdon
+        int ramdon = (int) (Math.random()*numAleatoGenera) + 1;
+        //*Variable para introducir para adivinar el numero
+        int adivNum;
+        //* */
+
+
 
     }
 
