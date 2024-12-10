@@ -50,6 +50,8 @@ public class ejercicio3 {
 
     // *funcion de jugar
     public static void jugar() {
+        int intentos;
+        intentos = numIntento;
         textT("");
         textT("!COMIENZA EL JUEGO!");
         // *Genera un numero ramdon
@@ -61,9 +63,9 @@ public class ejercicio3 {
         for (int i = 0; i <= numAleatoGenera; i *= 0) {
             if (adivNum != ramdon) {
                 System.out.println(
-                        "Adivina el numero entre 1 a " + numAleatoGenera + " Tienes " + numIntento + " Intentos");
+                        "Adivina el numero entre 1 a " + numAleatoGenera + " Tienes " + intentos + " Intentos");
                 adivNum = scanear.nextInt();
-                numIntento -= 1;
+                intentos -= 1;
             }
 
             if (adivNum > ramdon) {
@@ -73,17 +75,18 @@ public class ejercicio3 {
             }
 
             if (adivNum == ramdon) {
-                textT("Felicidades el numero era " + ramdon + " Te han sobrado: " + numIntento + " Intentos");
+                textT("Felicidades el numero era " + ramdon + " Te han sobrado: " + intentos + " Intentos");
                 break;
             }
 
-            if (numIntento == 0) {
+            if (intentos == 0) {
                 System.out.println("Perdiste, el numero era: " + ramdon);
                 break;
             }
 
         }
         textT("Gracias por jugar, espero tu regreso pronto");
+        menu();
         scanear.close();
 
     }
